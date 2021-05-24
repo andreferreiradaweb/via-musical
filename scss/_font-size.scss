@@ -1,0 +1,7 @@
+$size-h1: clamp(1.75em, calc(1em + 2vw), 3.75em);
+$size-h2: clamp(1em, calc(1em + 1vw), 2.75em);
+$size-p: clamp(0.8em, calc(0.1em + 1vw), 1.5em);
+$size-a: clamp(0.8em, calc(0.1em + 1vw), 1.5em);
+$size-button: clamp(0.8em, calc(0.1em + 1vw), 1em);
+$size-i: clamp(0.8em, calc(0.1em + 1vw), 1em);
+$size-span: clamp(0.8em, calc(0.1em + 1vw), 1.5em);

@@ -1,0 +1,146 @@
+#palco {
+  position: relative;
+  height: auto;
+  padding: 130px 0;
+  background: $gray-bg;
+
+  @media screen and (max-width: 799px) {
+    padding: 70px 0;
+  }
+  @media screen and (max-width: 560px) {
+    background: none;
+  }
+
+  .palco-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .palco-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @media screen and (max-width: 560px) {
+        flex-direction: column;
+      }
+      > p {
+        margin-left: 100px;
+        width: 230px;
+
+        @media screen and (max-width: 560px) {
+          margin-left: 0;
+          margin-top: 30px;
+        }
+      }
+      @include content-info();
+
+      .palco-glider-header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        p {
+          font-size: 20px;
+          color: $black-font;
+          font-weight: 600;
+          margin-bottom: 10px;
+
+          @media screen and (max-width: 560px) {
+            display: none;
+          }
+        }
+
+        .palco-buttons {
+          position: absolute;
+          width: 30px;
+          right: 30px;
+          top: -40px;
+
+          i {
+            padding: 7px 10px;
+            border: 1px solid $gray-font;
+            border-radius: 50px;
+          }
+        }
+      }
+
+      .palco-slider {
+        margin-top: 80px;
+        position: relative;
+
+        .palco-slider-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+          margin: 0 5px;
+          
+          .palco-video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            @include play-button();
+          }
+
+          video {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+            height: 100%;
+          }
+
+          .palco-info {
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+            background: #f8f8f8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            position: relative;
+
+            div {
+              display: flex;
+              align-items: center;
+
+              img {
+                width: 30px;
+                height: 30px;
+              }
+  
+              p {
+                font-size: 13px;
+                font-weight: 600;
+                color: $black-font;
+                margin-left: 10px;
+
+  
+                span {
+                  font-weight: 300;
+                  font-size: 12px;
+                }
+              }
+
+              .palco-info-clap {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

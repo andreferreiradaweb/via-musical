@@ -1,0 +1,49 @@
+#metodo {
+  height: auto;
+  padding: 130px 0;
+  position: relative;
+
+  @media screen and (max-width: 799px) {
+    padding: 50px 0;
+  }
+
+  .metodo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width: 799px) {
+      flex-direction: column;
+    }
+
+    @include display-row();
+    justify-content: space-between;
+    @include content-info();
+
+    .metodo-video {  
+      width: 400px;
+      position: relative;
+      display: flex;
+      margin-right: 30px;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (max-width: 799px) {
+        margin-bottom: 50px;
+        margin-right: 0px;
+      }
+      @media screen and (max-width: 465px) {
+        width: 100%;
+      }
+  
+
+      video {
+        width: 100%;
+        position: relative; 
+        border-radius: $radius;
+      }
+
+      @include play-button();
+    }
+  } 
+}

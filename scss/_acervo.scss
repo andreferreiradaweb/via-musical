@@ -1,0 +1,75 @@
+#acervo {
+  height: auto;
+  padding: 130px 0;
+  position: relative;
+
+  @media screen and (max-width: 799px) {
+    padding: 70px 0;
+  }
+
+  .acervo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @include content-info();
+    section {
+      @media screen and (max-width: 799px) {
+        margin-left: 50px;
+      }
+      @media screen and (max-width: 438px) {
+        margin-left: 0;
+      }
+    }
+
+    .acervo-images {
+      margin-top: 70px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      display: flex;
+
+      .acervo-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 130px;
+        height: 150px;
+
+        @media screen and (max-width: 560px) {
+          width: 100%;
+          height: 120px;
+          background: $gray-bg;
+          border-radius: $radius;
+          margin-top: 10px;
+          flex-direction: row;
+          padding: 10px;
+          padding-left: 30px;
+        }
+        @media screen and (max-width: 438px) {
+          padding-left: 0;
+        }
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+
+        p {
+          font-size: 11px;
+          color: $black-font;
+          font-weight: 700;
+          text-align: center;
+
+          @media screen and (max-width: 560px) {
+            margin-left: 20px;
+            text-align: start;
+          }
+          @media screen and (max-width: 438px) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

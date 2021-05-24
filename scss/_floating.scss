@@ -1,0 +1,61 @@
+.floating.disabled {
+  display: none;
+}
+
+.floating {
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  background: $green;
+  position: fixed;
+  z-index: 9;
+  bottom: 40px;
+  right: 60px;
+  border-radius: $radius;
+  animation: fadeIn .5s;
+  
+  @media screen and (max-width: 660px) {
+    display: none;
+  }
+
+  .floating-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    p {
+      color: $black-font;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: $size-p;
+    } 
+      
+    span {
+      font-weight: 600;
+      color: $black-font;
+      font-size: $size-span;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      bottom: 0;
+      padding: 7px;
+      color: $black-font;
+      font-weight: 600;
+      font-size: $size-button;
+    }
+
+    .floating-button-inscrevase {
+      border: 1px inset rgba(0,0,0,.3);
+      border-left: 2px inset $black-font;
+      border-bottom: 2px inset $black-font;
+      border-radius: 30px;
+    }
+  }
+}
+

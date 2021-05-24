@@ -1,0 +1,95 @@
+#bora {
+  margin: 30px;
+  height: auto;
+  padding: 130px 0;
+  position: relative;
+  background: url('./../assets/img/home/ebook-headset.png') $gray-bg no-repeat 100% center;
+  background-size: 500px; 
+
+  @media screen and (max-width: 715px) {
+    height: 600px;
+    background-position: 100% 95%; 
+  }
+
+  @media screen and (max-width: 1104px) {
+    background-size: 400px; 
+  }
+  @media screen and (max-width: 970px) {
+    background-size: 350px; 
+  }
+  @media screen and (max-width: 799px) {
+    padding: 70px 0;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .bora-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width: 715px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    @include content-info();
+
+    form {
+      width: 400px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @media screen and (max-width: 900px) {
+        width: 365px; 
+      }
+      @media screen and (max-width: 715px) {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 300px;
+      }
+      @media screen and (max-width: 639px) {
+        width: 280px;
+      }
+      @media screen and (max-width: 575px) {
+        width: 260px;
+      }
+      @media screen and (max-width: 434px) {
+        width: 100%;
+      }
+
+      fieldset {
+        border-radius: 50px;
+        width: 250px;
+
+        @media screen and (max-width: 434px) {
+          width: 100%;
+        }
+  
+        legend {
+          font-size: 12px;
+          margin-left: 15px;
+          padding: 0 5px;
+        }
+
+        input {
+          width: 100%;
+          padding: 0px 10px 5px;
+          background: transparent;
+          border: none;
+          color: $black-font;
+          font-weight: 600;
+        }
+      }
+
+      button {
+        @media screen and (max-width: 715px) {
+          margin-top: 10px;
+        }
+      }
+    }
+  } 
+}

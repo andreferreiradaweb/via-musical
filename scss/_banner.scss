@@ -1,0 +1,73 @@
+#banner {
+  height: 100vh;
+  min-width: 100vw;
+  background: url('../assets/img/home/bg-banner.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: lighten(#000000, 0);
+
+  .banner-wrapper {
+    width: 100%;
+    height: 100%;
+
+    @include display-row();
+    color: $white-font;
+
+    section {
+      width: 536px;
+
+      .banner-buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: row;
+        
+
+        @media screen and (max-width: 560px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      .banner-play-button {
+        @include button-with-icon();
+
+        @media screen and (max-width: 560px) {
+          margin: 0;
+          padding: 7px 0;
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        i {
+          font-size: 27px;
+        }
+      }
+
+      h1 {
+        font-size: $size-h1;
+
+        @media screen and (max-width: 560px) {
+          width: 280px;
+        }
+      }
+
+      h1, p {
+        color: $white-font;
+      }
+
+      p {
+        margin-bottom: 15px;
+        font-size: $size-p;
+        width: 280px;
+      }
+
+      button {
+        margin-right: 15px; 
+        color: #000;
+      }
+    }
+  }
+}

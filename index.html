@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/glider.css">
+  <!-- FONT-AWESOME ICONS FROM: cdnjs.com/libraries/font-awesome AND fontawesome.com/icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+  <!-- HEADER & NAVEGATION -->
+  <div id="header">
+    <div class="margin-big">
+      <div class="header-wrapper">
+        <img id="logo" src="./assets/img/home/logo-via-musical.png" alt="Logo via musical" />
+        <nav>
+          <ul>
+            <li><a href="#" class="current">Início</a></li>
+            <li><a href="#">Conheça o curso</a></li>
+            <li><a href="#">Talentos da casa</a></li>
+            <li><a href="#">Descubra seu nível</a></li>
+            <li><a href="#">Planos de assinatura</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-buttons">
+          <button class="header-login-button" type="button" onclick="showModal()">
+            <i class="far fa-user"></i>
+            Entrar
+          </button>
+          <button class="green-button">Comece agora</button>
+        </div>
+
+        <div id="hamburguer">
+          <i class="fas fa-bars"  onclick="modalMenu()"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- HEADER & NAVEGATION END -->
+
+  <!-- BANNER -->
+  <div id="banner">
+    <div class="margin-middle">
+      <div class="banner-wrapper">
+        <section>
+          <h1>Estude violão online com o suporte total do Professor.</h1>
+          <p>Uma escola de violão diferente de praticamente tudo que existe hoje no mercado de música online no Brasil.
+          </p>
+          <div class="banner-buttons">
+            <button class="green-button">Comece a aprender agora</button>
+            <button class="banner-play-button">
+              <i class="far fa-play-circle"></i>
+              Assistir ao vídeo
+            </button>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- BANNER END -->
+
+  <!-- SUPORTE -->
+  <div id="suporte">
+    <div class="margin-small">
+
+      <div class="suporte-wrapper">
+
+        <section>
+          <span>Suporte individual ao aluno</span>
+          <h2>Tenha aulas online com jeitinho de aulas presenciais.</h2>
+          <p>Você pode mandar vídeos para o professor te auxiliar nos exercícios e ainda receber receber feedback da sua
+            evolução. </p>
+          <button class="green-button" type="button">Comece agora</button>
+        </section>
+
+        <div class="video">
+          <video autoplay loop muted>
+            <source src="./assets/videos/home/suporte-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="video-images">
+          <img src="./assets/img/home/notification1.png" alt="video images notification exemplo">
+          <img src="./assets/img/home/notification2.png" alt="video images notification exemplo">
+          <img src="./assets/img/home/notification3.png" alt="video images notification exemplo">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- SUPORTE END -->
+
+  <!-- MÉTODO -->
+  <div id="metodo">
+    <div class="margin-small">
+      <div class="metodo-wrapper">
+
+        <div class="metodo-video" onclick="handlePlay(this)">
+          <video class="video-player">
+            <source src="./assets/videos/home/allan-sales.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+        </div>
+
+        <section>
+          <span>Método Allan Sales</span>
+          <h2>Pensamos em tudo para deixar mais fácil, você vai aprender até mesmo aquela pestana do Fá.</h2>
+          <p>Criamos um método exclusivo que te ajuda a vencer barreiras sentidas por todos que desejam tocar violão. Já
+            ajudamos mais de 15mil alunos
+            a aprender violão da maneira mais fácil.</p>
+          <button class="green-button" type="button">Conheça o curso</button>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  <!-- MÉTODO END -->
+
+  <!-- ESCOLA -->
+  <div id="escola">
+    <div class="margin-middle">
+      <div class="escola-wrapper">
+
+        <div class="escola-container">
+          <section>
+            <span>Escola online</span>
+            <h2>Te ensinamos tudo de violão quando e onde você quiser.
+              Mas o show é com você.</h2>
+            <button class="green-button" type="button">Descubra o seu nível</button>
+          </section>
+          <p>Com a assinatura de uma mensalidade,
+            você pode ter acesso a todos os recursos
+            do Via Musical.</p>
+        </div>
+
+        <div class="escola-container">
+          <div class="glider-contain escola-slider">
+            <div class="escola-buttons">
+              <button aria-label="Previous" class="glider-prev escola-glider-prev"><i
+                  class="fas fa-chevron-left"></i></button>
+              <button aria-label="Next" class="glider-next escola-glider-next"><i
+                  class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="glider escola-glider">
+              <div class="escola-slider-item" onclick="handlePlayEscola(this)">
+                <video class="video-element">
+                  <source src="./assets/videos/home/suporte-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                <div class="escola-video-info">
+                  <span>Avançado</span>
+                  <strong>Violão<br />popular</strong>
+                  <p><i class="fas fa-play"></i>65 Vídeos <i class="fas fa-gift"></i></i>12 Bônus</p>
+                </div>
+              </div>
+
+              <div class="escola-slider-item" onclick="handlePlayEscola(this)">
+                <video class="video-element">
+                  <source src="./assets/videos/home/suporte-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                <div class="escola-video-info">
+                  <span>Avançado</span>
+                  <strong>Violão<br />popular</strong>
+                  <p><i class="fas fa-play"></i>65 Vídeos <i class="fas fa-gift"></i></i>12 Bônus</p>
+                </div>
+              </div>
+
+              <div class="escola-slider-item" onclick="handlePlayEscola(this)">
+                <video class="video-element">
+                  <source src="./assets/videos/home/suporte-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                <div class="escola-video-info">
+                  <span>Avançado</span>
+                  <strong>Violão<br />popular</strong>
+                  <p><i class="fas fa-play"></i>65 Vídeos <i class="fas fa-gift"></i></i>12 Bônus</p>
+                </div>
+              </div>
+
+              <div class="escola-slider-item" onclick="handlePlayEscola(this)">
+                <video class="video-element">
+                  <source src="./assets/videos/home/suporte-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                <div class="escola-video-info">
+                  <span>Avançado</span>
+                  <strong>Violão<br />popular</strong>
+                  <p><i class="fas fa-play"></i>65 Vídeos <i class="fas fa-gift"></i></i>12 Bônus</p>
+                </div>
+              </div>
+
+              <div class="escola-slider-item" onclick="handlePlayEscola(this)">
+                <video class="video-element">
+                  <source src="./assets/videos/home/suporte-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                <div class="escola-video-info">
+                  <span>Avançado</span>
+                  <strong>Violão<br />popular</strong>
+                  <p><i class="fas fa-play"></i>65 Vídeos <i class="fas fa-gift"></i></i>12 Bônus</p>
+                </div>
+              </div>
+
+              <div class="escola-slider-item" onclick="handlePlayEscola(this)">
+                <video class="video-element">
+                  <source src="./assets/videos/home/suporte-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                <div class="escola-video-info">
+                  <span>Avançado</span>
+                  <strong>Violão<br />popular</strong>
+                  <p><i class="fas fa-play"></i>65 Vídeos <i class="fas fa-gift"></i></i>12 Bônus</p>
+                </div>
+              </div>
+
+              <div class="escola-slider-item" onclick="handlePlayEscola(this)">
+                <video class="video-element">
+                  <source src="./assets/videos/home/suporte-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                <div class="escola-video-info">
+                  <span>Avançado</span>
+                  <strong>Violão<br />popular</strong>
+                  <p><i class="fas fa-play"></i>65 Vídeos <i class="fas fa-gift"></i></i>12 Bônus</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- ESCOLA END -->
+
+  <!-- AUDITORIA -->
+  <div id="auditoria">
+    <div class="margin-small">
+      <div class="auditoria-wrapper">
+
+        <div class="auditoria-video">
+          <img class="auditoria-video-cover" src="./assets/img/home/video-cel-cover.png"
+            alt="moldura de celular para video">
+          <video autoplay loop muted>
+            <source src="./assets/videos/home/suporte-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <img class="auditoria-applause applause-1" src="./assets/img/elements/icon-applause.png"
+            alt="Ícone applause com efeito de movimento e desvanecimento">
+          <img class="auditoria-applause applause-2" src="./assets/img/elements/icon-applause.png"
+            alt="Ícone applause com efeito de movimento e desvanecimento">
+          <img class="auditoria-applause applause-3" src="./assets/img/elements/icon-applause.png"
+            alt="Ícone applause com efeito de movimento e desvanecimento">
+          <img class="auditoria-applause applause-4" src="./assets/img/elements/icon-applause.png"
+            alt="Ícone applause com efeito de movimento e desvanecimento">
+          <img class="auditoria-applause applause-5" src="./assets/img/elements/icon-applause.png"
+            alt="Ícone applause com efeito de movimento e desvanecimento">
+          <img class="auditoria-applause applause-6" src="./assets/img/elements/icon-applause.png"
+            alt="Ícone applause com efeito de movimento e desvanecimento">
+        </div>
+
+        <section>
+          <span>AUDITÓRIO E SALA DO PROFESSOR</span>
+          <h2>Assista aulas e plantão
+            de dúvidas ao vivo e receba orientação de estudos individual.</h2>
+          <p>O professor conhece as suas forças e dificuldades de cada aluno. Tenha um aprendizado do violão muito mais
+            gostoso e fácil.</p>
+          <button class="green-button" type="button">Comece agora</button>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  <!-- AUDITORIA END -->
+
+  <!-- PALCO -->
+  <div id="palco">
+    <div class="margin-middle">
+      <div class="palco-wrapper">
+
+        <div class="palco-container">
+          <section>
+            <span>Palco dos alunos</span>
+            <h2>Temos uma comunidade
+              para você interagir, você consegue até formar uma rodinha e tocar Legião Urbana.</h2>
+            <button class="green-button" type="button">Aplauda nossos talentos</button>
+          </section>
+          <p>Nossos alunos podem seguir, aplaudir
+            e visualizar as músicas dos colegas.
+            Afinal, tem coisa melhor do que fazer
+            amigos enquanto a gente aprende algo novo?</p>
+        </div>
+
+        <div class="palco-container">
+          <div class="glider-contain palco-slider">
+
+            <div class="palco-glider-header">
+              <p>Configra alguns dos nossos alunos:</p>
+              <div class="palco-buttons">
+                <button aria-label="Previous" class="glider-prev palco-glider-prev"><i
+                    class="fas fa-chevron-left"></i></button>
+                <button aria-label="Next" class="glider-next palco-glider-next"><i
+                    class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+
+            <div class="glider palco-glider">
+
+              <div class="palco-slider-item">
+                <div class="palco-video" onclick="handlePlay(this)">
+                  <video>
+                    <source src="./assets/videos/home/allan-sales.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                </div>
+                <div class="palco-info">
+                  <div>
+                    <img src="./assets/img/home/Avatar.png" alt="Imagem avatar do aluno">
+                    <p>Primeiros erros<br />
+                      <span>Sara Almeida</span>
+                    </p>
+                  </div>
+                  <div><img src="./assets/img/elements/clap.png" alt="icone de mãos batendo palmas"
+                      class="palco-info-clap">
+                    <p>2 mil</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="palco-slider-item">
+                <div class="palco-video" onclick="handlePlay(this)">
+                  <video>
+                    <source src="./assets/videos/home/allan-sales.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                </div>
+                <div class="palco-info">
+                  <div>
+                    <img src="./assets/img/home/Avatar.png" alt="Imagem avatar do aluno">
+                    <p>Primeiros erros<br />
+                      <span>Sara Almeida</span>
+                    </p>
+                  </div>
+                  <div><img src="./assets/img/elements/clap.png" alt="icone de mãos batendo palmas"
+                      class="palco-info-clap">
+                    <p>2 mil</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="palco-slider-item">
+                <div class="palco-video" onclick="handlePlay(this)">
+                  <video>
+                    <source src="./assets/videos/home/allan-sales.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                </div>
+                <div class="palco-info">
+                  <div>
+                    <img src="./assets/img/home/Avatar.png" alt="Imagem avatar do aluno">
+                    <p>Primeiros erros<br />
+                      <span>Sara Almeida</span>
+                    </p>
+                  </div>
+                  <div><img src="./assets/img/elements/clap.png" alt="icone de mãos batendo palmas"
+                      class="palco-info-clap">
+                    <p>2 mil</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="palco-slider-item">
+                <div class="palco-video" onclick="handlePlay(this)">
+                  <video>
+                    <source src="./assets/videos/home/allan-sales.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                </div>
+                <div class="palco-info">
+                  <div>
+                    <img src="./assets/img/home/Avatar.png" alt="Imagem avatar do aluno">
+                    <p>Primeiros erros<br />
+                      <span>Sara Almeida</span>
+                    </p>
+                  </div>
+                  <div><img src="./assets/img/elements/clap.png" alt="icone de mãos batendo palmas"
+                      class="palco-info-clap">
+                    <p>2 mil</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="palco-slider-item">
+                <div class="palco-video" onclick="handlePlay(this)">
+                  <video>
+                    <source src="./assets/videos/home/allan-sales.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                </div>
+                <div class="palco-info">
+                  <div>
+                    <img src="./assets/img/home/Avatar.png" alt="Imagem avatar do aluno">
+                    <p>Primeiros erros<br />
+                      <span>Sara Almeida</span>
+                    </p>
+                  </div>
+                  <div><img src="./assets/img/elements/clap.png" alt="icone de mãos batendo palmas"
+                      class="palco-info-clap">
+                    <p>2 mil</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="palco-slider-item">
+                <div class="palco-video" onclick="handlePlay(this)">
+                  <video>
+                    <source src="./assets/videos/home/allan-sales.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <img class="video-image" src="./assets/img/elements/play-button.png" alt="a play button" />
+                </div>
+                <div class="palco-info">
+                  <div>
+                    <img src="./assets/img/home/Avatar.png" alt="Imagem avatar do aluno">
+                    <p>Primeiros erros<br />
+                      <span>Sara Almeida</span>
+                    </p>
+                  </div>
+                  <div><img src="./assets/img/elements/clap.png" alt="icone de mãos batendo palmas"
+                      class="palco-info-clap">
+                    <p>2 mil</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- PALCO END -->
+
+  <!-- ACERVO -->
+  <div id="acervo">
+    <div class="margin-middle">
+      <div class="acervo-wrapper">
+        <section>
+          <span>Acervo musical</span>
+          <h2>Tenha acesso ao nosso acervo completo que vai acelerar 
+            seu aprendizado musical.</h2>
+          <p>Pensando nos nossos alunos apaixonados pela música
+            e exploradores de novidades, criamos a nossa biblioteca
+            exclusiva, corra para se inscrever e aproveitar o nosso acervo.</p>
+          <button class="green-button" type="button">Comece agora</button>
+        </section>
+      </div>
+      <div class="acervo-wrapper">
+        <div class="acervo-images">
+
+          <div class="acervo-item">
+            <img src="./assets/img/home/acervo-01.png" alt="Imagem representando graficos" />
+            <p>Cifras para todos os gostos e níveis</p>
+          </div>
+
+          <div class="acervo-item">
+            <img src="./assets/img/home/acervo-02.png" alt="Imagem representando graficos" />
+            <p>Aulas extras</p>
+          </div>
+
+          <div class="acervo-item">
+            <img src="./assets/img/home/acervo-03.png" alt="Imagem representando graficos" />
+            <p>Conteúdos que complementam as aulas</p>
+          </div>
+
+          <div class="acervo-item">
+            <img src="./assets/img/home/acervo-04.png" alt="Imagem representando graficos" />
+            <p>Apostilas com conteúdos diversos</p>
+          </div>
+
+          <div class="acervo-item">
+            <img src="./assets/img/home/acervo-05.png" alt="Imagem representando graficos" />
+            <p>E muito mais!</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ACERVO END -->
+
+  <!-- BORA TOCAR -->
+  <div id="bora">
+    <div class="margin-middle">
+      <div class="bora-wrapper">
+        <section>
+          <span>Bora tocar</span>
+          <h2>Pegue o seu violão 
+            e experimente nossas aulas!</h2>
+          <p>Se inscrevendo, você ainda recebe uma apostila exclusiva do Via Musical!</p>
+        </section>
+
+        <form>
+          <fieldset>
+            <legend>E-mail</legend>
+            <input type="email" />
+          </fieldset>
+          <button class="green-button" type="submit">Comece agora</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <!-- BORA TOCAR END -->
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <div class="margin-middle">
+      <div class="footer-wrapper">
+
+        <div class="footer-content">
+          <h3>Ensino</h3>
+          <ul>
+            <li><a>Escola online</a></li>
+            <li><a>Talentos da casa</a></li>
+            <li><a>Seja um professor</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-content">
+          <h3>Ensino</h3>
+          <ul>
+            <li><a>Suporte</a></li>
+            <li><a>Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-content">
+          <h3>Ensino</h3>
+          <div class="footer-socials">
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer-wrapper">
+        <div class="footer-info">
+          <p>©Via Musical, Inc. 2020</p>
+          <ul>
+            <li><a href="">Privacidade</a></li>
+            <li><a href="">Termos e condições</a></li>
+            <li><a href="">Política de reembolso</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER END -->
+
+  <!-- FLOATING -->
+  <div class="floating disabled">
+    <div class="floating-wrapper">
+      <p><span>Inscreva-se</span> e ganhe o acesso a aulas exclusivas e ao E-Book gratuito do Via Musical</p>
+      <button onclick="closeFloating()">Fechar</button>
+      <button class="floating-button-inscrevase">Inscreva-se</button>
+    </div>
+  </div>
+  <!-- FLOATING END -->
+
+  <!-- MODAL LOGIN -->
+  <div id="modal" class="modal-login-container">
+    <div class="modal-login">
+      <button class="modal-close" onclick="showModal()">X</button>
+      <strong>Preencha seus dados para entrar.</strong>
+      <form action="">
+        <button>
+          <img src="./assets/img/elements/face-icon.png" alt="Ícone do Facebook">
+          Entrar com Facebook
+        </button>
+        <button>
+          <img src="./assets/img/elements/google-icon.png" alt="Ícone do Google">
+          Entrar com Google
+        </button>
+        <p>ou</p>
+        <input type="email" placeholder="E-mail" />
+        <input type="password" placeholder="Digite sua senha" class="modal-pass-input" />
+        <a href="#" class="modal-forgot-pass" onclick="changeContent()">Esqueci minha senha</a>
+        <button class="modal-login-buttom">Entrar</button>
+        <span>Novo por aqui? <a href="#">Criar conta</a></span>
+      </form>
+    </div>
+
+    <div class="modal-reset disabled">
+      <button class="modal-close" onclick="showModal()">X</button>
+      <strong>Confirme <br/>seu e-mail.</strong>
+      <p>Enviaremos um e-mail de redefinição de senha para você. Caso não receba na sua caixa principal, confira sua caixa de spam.</p>
+      <form action="">
+        <input type="email" placeholder="E-mail" />
+        <a href="#" class="modal-reset-back" onclick="changeContent()">Voltar</a>
+        <button class="modal-reset-send-button">Enviar e-mail</button>
+      </form>
+    </div>
+  </div>
+  <!-- MODAL LOGIN END -->
+
+  <!-- MODAL MENU -->
+  <div class="modal-menu disabled">
+    <div class="modal-menu-wrapper">
+      <button onclick="modalMenu()">X</button>
+      <ul>
+        <li><a href="" class="active">Início</a></li>
+        <li><a href="">Escola online</a></li>
+        <li><a href="">Talentos da casa</a></li>
+        <li><a href="">Descubra seu nível</a></li>
+        <li><a href="">Planos de estudo</a></li>
+        <li><a href="">Entrar</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- MODAL MENU END -->
+
+  <script type="text/javascript" src="js/glider.js"></script>
+  <script type="text/javascript" src="js/glider-config.js"></script>
+  <script type="text/javascript" src="js/addClassOnScroll.js"></script>
+  <script type="text/javascript" src="js/scroll-out.js"></script>
+  <script type="text/javascript" src="js/handlePlayEscola.js"></script>
+  <script type="text/javascript" src="js/handlePlay.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
+  <script type="text/javascript" src="js/floating.js"></script>
+  <script type="text/javascript">
+    ScrollOut({
+      targets: ['.video-images']
+    })
+  </script>
+
+</body>
+
+</html>

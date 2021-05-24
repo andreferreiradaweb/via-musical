@@ -1,0 +1,30 @@
+// @media screen and(max-width: 1050) {
+//     #header {
+
+//     }
+// }
+
+@media screen and (max-width: 857px) {
+  
+  #header {
+    .header-wrapper {
+      nav {
+        display: none;
+      }
+      .header-buttons {
+        border: none;
+
+        .header-login-button {
+          display: none;
+        }
+      }  
+      #hamburguer {
+        display: block;
+        margin-left: 15px;
+        i {
+          color: $gray-font;
+        }
+      }
+    } 
+  }
+}

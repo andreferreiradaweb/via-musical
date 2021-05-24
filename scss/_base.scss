@@ -1,0 +1,207 @@
+$radius: 10px;
+
+* {
+  font-family: 'open-sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: $gray-font;
+    font-family: Poppins;
+    outline: none;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.margin-big {
+  max-width: 1200px;
+  width: 95%;
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 730px;
+  }
+  @media screen and (max-width: 799px) {
+    width: 100%;
+  }
+}
+
+.margin-middle {
+  max-width: 1024px;
+  width: 85%;
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 700px;
+  }
+  @media screen and (max-width: 799px) {
+    width: 100%;
+  }
+}
+
+.margin-small {
+  max-width: 900px;
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 600px;
+  }
+  @media screen and (max-width: 799px) {
+    width: 100%;
+  }
+}
+
+@mixin display-row() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+@mixin display-column() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+@mixin content-info() {
+  section {
+    width: 430px;
+
+    @media screen and (max-width: 974px) {
+      width: 300px;
+    }
+    @media screen and (max-width: 434px) {
+      width: 100%;
+    }
+
+    span {
+      text-transform: uppercase;
+      color: $gray-font-uppercase;
+      font-size: $size-span;
+    }
+
+    h2 {
+      color: $black-font;
+      font-size: $size-h2;
+      font-weight: 700;
+      line-height: 2.8rem;
+    }
+
+    p {
+      color: $gray-font;
+      margin-bottom: 15px;
+      font-size: $size-p;
+    }
+  }
+}
+
+@mixin button-with-icon() {
+    background-color: transparent;
+    color: $white-font;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+
+    i {
+      margin-right: 5px;
+      color: $white-font;
+    }
+}
+
+@mixin animation-right() {
+  &[data-scroll="in"] {
+    animation-name: fly;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-delay: .5s;
+    // // animation-direction: reverse;
+    animation-fill-mode: forwards;
+  }
+}
+
+@mixin animation-applause() {
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    // animation-delay: .5s;
+    // animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+@mixin animation-applause2() {
+  animation-name: applause;
+  @include animation-applause();
+}
+@mixin animation-applause3() {
+  animation-name: applause-right;
+  @include animation-applause();
+  animation-delay: .3s;
+}
+@mixin animation-applause4() {
+  animation-name: applause-left;
+  @include animation-applause();
+  animation-delay: .6s;
+}
+@mixin animation-applause5() {
+  animation-name: applause;
+  @include animation-applause();
+  animation-delay: .9s;
+}
+@mixin animation-applause6() {
+  animation-name: applause-right;
+  @include animation-applause();
+  animation-delay: 1.2s;
+}
+
+@mixin play-button() {
+  .playing {
+    display: none;
+  }
+
+  > img {
+    z-index: 1;
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+  }
+}
+
+@mixin play-button-tl() {
+  @include play-button();
+  > img {
+    top: 10px;
+    left: 15px;
+
+    @media screen and (max-width: 470px) {
+      left: 100px;
+    }
+    @media screen and (max-width: 380px) {
+      left: 50px;
+    }
+    @media screen and (max-width: 338px) {
+      left: 30px;
+    }
+  }
+}
